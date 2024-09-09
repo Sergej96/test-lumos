@@ -1,0 +1,38 @@
+.root {
+    @apply mt-10 md:mt-18;
+}
+
+.items {
+    @apply grid grid-cols-1 gap-x-8 gap-y-2 md:grid-cols-2;
+}
+
+.item {
+    @apply flex flex-col items-center gap-2 border-t border-gray py-4 text-center;
+}
+
+.icon {
+    @apply relative;
+}
+
+.icon::after,
+.icon::before {
+    @apply absolute -left-[30px] top-1/2 size-4 -translate-y-1/2;
+    content: '';
+    background: url('../../../shared/assets/icons/star.svg') no-repeat center;
+}
+
+.icon::after {
+    @apply -right-[30px] left-auto;
+}
+
+@media (min-width: 768px) {
+    .item:nth-last-child(-n + 2) {
+        @apply border-b;
+    }
+}
+
+@media (max-width: 768px) {
+    .item:last-child {
+        @apply border-b;
+    }
+}

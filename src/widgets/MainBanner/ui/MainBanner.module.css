@@ -1,5 +1,5 @@
 .title {
-    @apply max-w-72 text-center mx-auto
+    @apply mx-auto max-w-72 text-center;
 }
 
 .mark {
@@ -7,13 +7,24 @@
 }
 
 .image {
-    @apply object-contain mx-auto -mt-2 w-full;
+    @apply mx-auto -mt-2 w-full object-contain;
     max-width: 540px;
     translate: 1rem;
 }
 
 .button {
-    @apply mx-auto block mt-4;
+    @apply mx-auto mt-4 block;
     max-width: 24.75rem;
     width: 100%;
+}
+
+@media (max-width: 576px) {
+    .image-container {
+        @apply -mx-4 overflow-hidden;
+    }
+
+    .image {
+        width: calc(100% + 2.5rem);
+        translate: -0.5rem;
+    }
 }

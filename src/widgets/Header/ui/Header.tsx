@@ -1,26 +1,34 @@
-import styles from "./Header.module.css";
-import { FC } from "react";
-import logo from "@/shared/assets/icons/logo.svg";
-import Image from "next/image";
-import { Typography } from "@/shared/ui/Typography";
-import { Button } from "@/shared/ui/Button";
+'use client';
+import styles from './Header.module.css';
+import { FC, MouseEvent, useCallback } from 'react';
+import logo from '@/shared/assets/icons/logo.svg';
+import Image from 'next/image';
+import { Typography } from '@/shared/ui/Typography';
+import { Button } from '@/shared/ui/Button';
 
 interface HeaderProps {}
 
 export const Header: FC<HeaderProps> = ({}) => {
-  return (
-    <header className={styles.header}>
-      <div className={styles["logo-container"]}>
-        <a href="#">
-          <Image src={logo} alt="logo" />
-          <Typography variant="md">VPN</Typography>
-        </a>
-      </div>
-      <div>
-        <Button theme="secondary" rounded>
-          Get VPN
-        </Button>
-      </div>
-    </header>
-  );
+    const scrollToTop = useCallback((event: MouseEvent<HTMLAnchorElement>) => {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    }, []);
+    return (
+        <header className={styles.header}>
+            <div className={styles['logo-container']}>
+                <a href="/#main" onClick={scrollToTop}>
+                    <Image src={logo} alt="logo" />
+                    <Typography variant="md">VPN</Typography>
+                </a>
+            </div>
+            <div>
+                <Button theme="secondary" rounded>
+                    <a href="/#select-plan">Get VPN</a>
+                </Button>
+            </div>
+        </header>
+    );
 };

@@ -5,6 +5,7 @@ const config: Config = {
     theme: {
         extend: {
             spacing: {
+                '18': '4.5rem',
                 107: '26.75rem',
             },
             colors: {

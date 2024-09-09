@@ -2,3 +2,9 @@
     max-width: 55.75rem;
     margin: 75px auto 92px;
 }
+
+@media (max-width: 768px) {
+    .container {
+        @apply mx-4 mt-3 mb-9
+    }
+}

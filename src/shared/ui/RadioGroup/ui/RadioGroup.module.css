@@ -1,0 +1,24 @@
+.radio {
+    @apply relative flex cursor-pointer rounded-2xl px-2.5 py-8;
+    box-shadow: 0px 2px 11px 0px #00000040;
+}
+
+.radio-content {
+    @apply flex w-full items-center gap-2;
+}
+
+.radio-icon {
+    @apply border-2 border-gray rounded-full size-6;
+}
+
+.radio-icon.active {
+    @apply border-0;
+}
+
+.radio-check {
+    @apply size-6 object-cover opacity-0
+}
+
+.radio-check.active {
+    @apply opacity-100
+}

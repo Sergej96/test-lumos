@@ -11,18 +11,22 @@ interface MainBannerProps {}
 
 export const MainBanner: FC<MainBannerProps> = ({}) => {
     return (
-        <div className={styles.banner}>
+        <div className={styles.banner} id="main">
             <Typography variant="xxl" className={styles.title}>
                 Access <span className={styles.mark}>everything securely</span>{' '}
                 with <br />
                 VPN
             </Typography>
-            <Image
-                src={mainBanner}
-                alt="main-banner"
-                className={styles.image}
-            />
-            <Button className={styles.button}>Get VPN</Button>
+            <div className={styles['image-container']}>
+                <Image
+                    src={mainBanner}
+                    alt="main-banner"
+                    className={styles.image}
+                />
+            </div>
+            <Button className={styles.button}>
+                <a href="/#select-plan">Get VPN</a>
+            </Button>
             <CountUsers />
             <CardInfo />
             <Typography
