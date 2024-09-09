@@ -1,0 +1,26 @@
+.achievement {
+    @apply relative mx-auto w-fit;
+}
+
+.achievement::after,
+.achievement::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    left: -1.875rem;
+    width: 1.375rem;
+    height: 2.625rem;
+    background: url('../../../assets//icons/wreath.svg') no-repeat;
+}
+
+.achievement::after {
+    left: auto;
+    right: -1.875rem;
+    transform: rotateY(180deg);
+}
+
+.text {
+    @apply text-secondary text-center relative block h-full;
+    padding-block: 1px;
+}

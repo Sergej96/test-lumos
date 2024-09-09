@@ -2,22 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply text-black bg-white text-base;
+}
+
+@layer base {
+  @font-face {
+    font-family: Poppins;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../shared/assets/fonts/Poppins-Regular.ttf') format('ttf');
+  }
+
+  @font-face {
+    font-family: Poppins;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../shared/assets/fonts/Poppins-Medium.ttf') format('ttf');
+  }
+
+  @font-face {
+    font-family: Poppins;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../shared/assets/fonts/Poppins-SemiBold.ttf') format('ttf');
+  }
+
+  @font-face {
+    font-family: Poppins;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../shared/assets/fonts/Poppins-Bold.ttf') format('ttf');
+  }
 }
 
 @layer utilities {

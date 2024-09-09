@@ -1,0 +1,12 @@
+.button {
+    @apply h-16 px-15.5 text-white text-md font-bold rounded-2xl transition-colors;
+}
+.button.primary {
+    @apply bg-primary hover:opacity-75 disabled:opacity-60 focus-visible:outline-none;
+}
+.button.secondary {
+    @apply h-10 bg-secondary text-sm font-semibold leading-xs py-2.5 px-6 disabled:opacity-60 focus-visible:outline-none;
+}
+.button.rounded {
+    @apply rounded-full;
+}

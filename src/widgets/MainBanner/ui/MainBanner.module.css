@@ -1,0 +1,19 @@
+.title {
+    @apply max-w-72 text-center mx-auto
+}
+
+.mark {
+    @apply text-secondary;
+}
+
+.image {
+    @apply object-contain mx-auto -mt-2 w-full;
+    max-width: 540px;
+    translate: 1rem;
+}
+
+.button {
+    @apply mx-auto block mt-4;
+    max-width: 24.75rem;
+    width: 100%;
+}

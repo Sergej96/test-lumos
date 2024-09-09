@@ -1,0 +1,24 @@
+.xxl {
+    @apply text-xl font-bold leading-xl;
+}
+.xl {
+    @apply text-lg font-bold leading-lg;
+}
+.lg {
+    @apply text-md font-bold leading-md;
+}
+.md {
+    @apply text-base font-semibold leading-base;
+}
+.base {
+    @apply text-base font-medium leading-base;
+}
+.sm {
+    @apply text-sm font-semibold leading-xs;
+}
+.xs {
+    @apply text-sm font-normal leading-xs;
+}
+.xxs{
+    @apply text-xs font-medium leading-xs
+}
