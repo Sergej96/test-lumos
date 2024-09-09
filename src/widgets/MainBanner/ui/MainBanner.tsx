@@ -25,6 +25,12 @@ export const MainBanner: FC<MainBannerProps> = ({}) => {
             <Button className={styles.button}>Get VPN</Button>
             <CountUsers />
             <CardInfo />
+            <Typography
+                variant="base"
+                className="mt-[24px] w-full text-center text-gray">
+                VPN-your <span className={styles.mark}>ultimate</span> solution
+                for a private and secure online experience!
+            </Typography>
         </div>
     );
 };
