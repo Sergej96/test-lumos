@@ -24,9 +24,9 @@ export const MainBanner: FC<MainBannerProps> = ({}) => {
                     className={styles.image}
                 />
             </div>
-            <Button className={styles.button}>
-                <a href="/#select-plan">Get VPN</a>
-            </Button>
+            <a href="/#select-plan">
+                <Button className={styles.button}>Get VPN</Button>
+            </a>
             <CountUsers />
             <CardInfo />
             <Typography

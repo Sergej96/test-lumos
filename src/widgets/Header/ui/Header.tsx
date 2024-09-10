@@ -25,9 +25,11 @@ export const Header: FC<HeaderProps> = ({}) => {
                 </a>
             </div>
             <div>
-                <Button theme="secondary" rounded>
-                    <a href="/#select-plan">Get VPN</a>
-                </Button>
+                <a href="/#select-plan">
+                    <Button theme="secondary" rounded>
+                        Get VPN
+                    </Button>
+                </a>
             </div>
         </header>
     );
