@@ -33,7 +33,6 @@ export const SelectPlans: FC<SelectPlansProps> = ({}) => {
             <RadioGroup
                 options={users}
                 onChange={(value) => setSelectedUser(value.name)}
-                value={selectedUser}
             />
             <DialogPlan userName={selectedUser} />
         </div>
